@@ -7,3 +7,10 @@ html {
 	max-width: 100vw;
 	max-height: auto;
 }
+
+#outputDisplay{
+	max-width: 100vw;
+	max-height: auto;
+	padding: 10px;
+	padding-top: 20px;
+}

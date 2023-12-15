@@ -61,17 +61,16 @@ await displayAIResponse("Reply with one random word of your choosing. Do not inc
 };
 
 
-import 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
 
-document.querySelector("#submitInput").addEventListener('click', async function() {
-	let userInput = document.querySelector("#userInput").value.trim();
-	let markdown = await useAI(userInput);
 
-	// Use marked.js to convert markdown to HTML
-	//let html = marked(markdown);
+document.getElementById("submitInput").addEventListener('click', async function() {
+	
+	var userInput = document.querySelector("#userInput").value.trim();
 
-	// Set the innerHTML of the mdDisplay element to the converted HTML
-	document.querySelector("#mdDisplay").innerHTML = markdown;
+	var query = "Respond to the user in a kind and helpful manner. Do not ask any questions, even clarifying or personal questions. The user says: " + userInput;
+	var response = await useAI(userInput);
+	document.querySelector("#outputDisplay").innerHTML = response;
+
 });
 
 

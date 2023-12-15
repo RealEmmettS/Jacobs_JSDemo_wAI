@@ -13,6 +13,12 @@
 <body>
 	<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 	<script type="module" src="script.js"></script>
+	<script>
+		window.onload = function() {
+			window.marked = marked;
+		};
+	</script>
+
 
 
 
@@ -30,7 +36,9 @@
 	
 
 	
-	<md-block id="mdDisplay"></md-block>
+	<div id="outputDisplay">
+		<p></p>
+	</div>
 
 
 
